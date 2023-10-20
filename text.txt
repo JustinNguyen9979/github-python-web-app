@@ -1,0 +1,3 @@
+docker run -d -v mysql-python-app-volume:/var/lib/mysql -v mysql-python-app-volume-config:/etc/mysql --name mysql-flask-app-container -p 3309:3306 --network mysql-python-app-network -e MYSQL_ROOT_PASSWORD=123456 mysql:8.0.28
+
+docker run -dp 5002:5000 --name python-flask-app-container --network mysql-python-app-network -v "$(pwd):/app" 997909799/python-flask-app:V1.0.0
