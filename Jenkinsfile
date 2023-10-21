@@ -4,7 +4,8 @@ pipeline {
         stage ('Clone stage') {
             steps {
                 // echo 'Hello world'
-                git credentialsId: 'pythonWebApp', url: 'https://gitlab.com/justin_nguyen_9979/pythonwebapp.git'
+                git credentialsId: 'Gitlab-PythonWebApp', url: 'https://gitlab.com/justin_nguyen_9979/pythonwebapp.git'
+                sh 'git clone https://gitlab.com/justin_nguyen_9979/pythonwebapp.git'
             }
         }
         stage ('Build stage') {
